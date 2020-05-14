@@ -25,6 +25,15 @@
 			<p><span aria-hidden="true">💻</span> I'm currently accepting some limited freelance work! Want some help with your project? <a href="joshuamasen7@gmail.com">Email me.</a></p>
 		</aside>
 
+		<div class="toggle">
+			<span aria-hidden="true">☀️</span>
+			<input type="checkbox" id="toggle-switch" />
+			<label for="toggle-switch">
+				<span class="screen-reader-text">Toggle Color Scheme</span>
+			</label>
+			<span aria-hidden="true">🌙</span>
+		</div>
+
 		<main class="contain">
 			<h1>Joshua Masen</h1>
 			<header class="header">
@@ -125,4 +134,53 @@
 		<footer class="footer">This site was built with <a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/">HTML</a> & <a target="_blank" rel="noopener" href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a>. Background pattern generated with <a target="_blank" rel="noopener" href="http://www.heropatterns.com">Hero Patterns</a>.</footer>
 
 	</body>
+
+	<script type="text/javascript">
+		// Dark mode toggle JS
+
+		// Get toggle switch
+		const toggleSwitch = document.getElementById('toggle-switch');
+
+		// Check for previously selected theme or color scheme setting
+		function checkTheme() {
+			if (localStorage.getItem('theme')) {
+				currentTheme = localStorage.getItem('theme');
+			}
+
+			else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				currentTheme = 'dark';
+			}
+
+			else {
+				currentTheme = null;
+			}
+		}
+
+		// Switch theme and store setting
+		function switchTheme(e) {
+			if (e.target.checked) {
+				document.documentElement.setAttribute('data-theme', 'dark');
+				localStorage.setItem('theme', 'dark');
+			}
+
+			else {
+				document.documentElement.setAttribute('data-theme', 'light');
+				localStorage.setItem('theme', 'light');
+			}
+		}
+
+		// Listen for switch toggles
+		toggleSwitch.addEventListener('change', switchTheme, false);
+
+		checkTheme();
+
+		// Set stored theme
+		if (currentTheme) {
+			document.documentElement.setAttribute('data-theme', currentTheme);
+
+			if (currentTheme === 'dark') {
+				toggleSwitch.checked = true;
+			}
+		}
+	</script>
 </html>
