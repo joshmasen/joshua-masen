@@ -1,0 +1,37 @@
+<template>
+  <head>
+    <title>Joshua Masen | Software Engineer</title>
+    <meta
+      name="description"
+      content="I like to build stuff - usually on the web. Currently a Software Engineer building internal email marketing software at Workshop."
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- https://csswizardry.com/2020/05/the-fastest-google-fonts/ -->
+    <!-- Warm up the fonts origin -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- High-priority async fetch for font CSS -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap"
+    />
+    <!-- Low-priority async fetch applied after arrival-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- If by chance JS is disabled -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap"
+      />
+    </noscript>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+</template>

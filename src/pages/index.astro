@@ -1,32 +1,58 @@
 ---
 // Component Imports
-import Counter from '../components/Counter.vue'
-
+import Resume from '../components/Resume.vue'
+import PageWrap from '../components/PageWrap.vue'
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <style>
-      html,
-      body {
-        font-family: system-ui;
-        margin: 0;
-      }
-      body {
-        padding: 2rem;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <Counter client:visible>
-        <h1>Hello, Vue!</h1>
-      </Counter>
-    </main>
-  </body>
-</html>
+<PageWrap>
+  <header>
+    <h1>Hey <span class="tada">👋</span><br /> <span>I'm Josh Masen.</span></h1>
+  </header>
+  <main class="contain">
+    <section id="web">
+      <p>I've been building stuff on the web for over 10 years. While I was in college studying graphic design, I taught myself to code and started building websites for freelance clients. By the time I earned my degree, I realized I was super passionate about writing code and creating on the web, so I started my career in web&nbsp;development.</p>
+
+      <p>Here's what I've been up to since then, in resume-style reverse chronological order:</p>
+
+      <Resume />
+
+    </section>
+
+    <!-- <section id="music">
+
+      <h2>Music things</h2>
+      <p>I've been playing guitar and writing, recording, and performing my own songs since I was a teenager. I released my debut solo album <span class="italic">It's a Wonder</span> in December of 2018 on streaming platforms and on vinyl.</p>
+
+      <p>I still have a few copies of the album on vinyl. If you're interested in one, <a href="joshuamasen7@gmail.com">email me.</a></p>
+
+      <div class="videoWrapper">
+        <iframe loading="lazy" title="Joshua Masen Spotify album stream" src="https://open.spotify.com/embed/album/27ugt0eQeUz3UzlVmODWzC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+
+      <div class="videoWrapper">
+        <iframe loading="lazy" title="Joshua Masen 'Million Dollar Bill' music video" width="560" height="315" src="https://www.youtube.com/embed/MIGav-fym5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div class="videoWrapper">
+        <iframe loading="lazy" title="Joshua Masen 'All My Life' live music video" width="560" height="315" src="https://www.youtube.com/embed/pJK5Kd46_2o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div class="videoWrapper">
+        <iframe loading="lazy" title="Joshua Masen 'Waitin on a Change of Heart' music video" width="560" height="315" src="https://www.youtube.com/embed/bsF8_knoqQw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+    </section>
+
+    <section id="family">
+      <h2>Family</h2>
+      <img loading="lazy" src="assets/us.jpg" alt="Joshua Masen & wife">
+      <img loading="lazy" src="assets/family.jpg" alt="Joshua Masen Family">
+      <p>I grew up with a very large family in Iowa, and my wife Casey and I now have one daughter of our own. When we get free time, we like live music, hiking, biking, and kayaking.</p>
+    </section> -->
+  </main>
+
+  <!-- <Contact /> -->
+
+</PageWrap>
