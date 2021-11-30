@@ -1,6 +1,7 @@
 <template>
   <div class="notice">
-    Want to work on a project together? <a href="#">Email me!</a>
+    I've got some limited time available for freelance projects.
+    <a href="mailto:joshuamasen7@gmail.com">Email&nbsp;me!</a>
   </div>
 </template>
 

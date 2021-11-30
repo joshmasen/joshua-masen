@@ -1,9 +1,9 @@
 <template>
-  <section class="contact">
-    <Button href="mailto:joshuamasen7@gmail.com">
-      Wanna chat about your project? Send me an email!
-    </Button>
-  </section>
+  <div class="contact">
+    <Button href="mailto:joshuamasen7@gmail.com"
+      >Want to chat about your project? Email&nbsp;me!</Button
+    >
+  </div>
 </template>
 
 <script>
@@ -24,5 +24,6 @@ export default {
   display: flex;
   justify-content: center;
   padding: 0 2rem;
+  margin-bottom: 4rem;
 }
 </style>

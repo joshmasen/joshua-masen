@@ -1,5 +1,5 @@
 <template>
-  <a href="{{ href }}" target="_blank" class="button"><slot /></a>
+  <a :href="href" target="_blank" class="button"><slot /></a>
 </template>
 
 <script>

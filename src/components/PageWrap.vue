@@ -7,12 +7,15 @@
 
       <slot />
 
+      <Contact />
+
       <Footer />
     </body>
   </html>
 </template>
 
 <script>
+import Contact from "./Contact.vue";
 import Head from "./Head.vue";
 import Notice from "./Notice.vue";
 // import Toggle from "./Toggle.vue";
@@ -20,6 +23,7 @@ import Footer from "./Footer.vue";
 
 export default {
   components: {
+    Contact,
     Head,
     // Toggle,
     Footer,

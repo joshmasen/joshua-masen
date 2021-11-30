@@ -1,7 +1,7 @@
 <template>
   <ul class="jobs">
     <li v-for="job in jobs" :key="job.employer" class="job">
-      <a href="{{ job.employerUrl }}"
+      <a :href="job.employerUrl"
         ><h3>
           {{ job.employer
           }}<small class="employer-note" v-if="job.employerNote">{{
@@ -36,7 +36,7 @@ export default {
             title: "Software Engineer",
             dates: "January 2021 - Present",
             summary:
-              "At Workshop, we're building delightful internal email marketing software.",
+              "At Workshop, we're building delightful internal email marketing software. I work on the front end of our (Ruby on Rails) application, using Vue.",
           },
         ],
       },
@@ -103,10 +103,6 @@ export default {
 </script>
 
 <style>
-.jobs {
-  margin-bottom: 4rem;
-}
-
 .role {
   margin-bottom: 2rem;
 }
@@ -149,8 +145,8 @@ li > ul > li:before {
   content: "•";
   font-size: 2rem;
   position: absolute;
-  left: -25px;
-  top: -15px;
+  left: -24px;
+  top: -11px;
 }
 
 li > ul > li:after {
@@ -161,5 +157,15 @@ li > ul > li:after {
   left: -18px;
   width: 2px;
   background-color: var(--primary);
+}
+
+@media (min-width: 650px) {
+  li > ul > li:before {
+    content: "•";
+    font-size: 2rem;
+    position: absolute;
+    left: -26px;
+    top: -15px;
+  }
 }
 </style>
