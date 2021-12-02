@@ -1,7 +1,12 @@
 <template>
   <div class="toggle">
     <span aria-hidden="true">☀️</span>
-    <input type="checkbox" id="toggle-switch" />
+    <input
+      ref="toggleSwitch"
+      type="checkbox"
+      id="toggle-switch"
+      @change="switchTheme"
+    />
     <label for="toggle-switch">
       <span class="screen-reader-text">Toggle Color Scheme</span>
     </label>
@@ -10,46 +15,58 @@
 </template>
 
 <script>
+import { ref, onMounted } from "vue";
+
 export default {
-  // setup() {
-  //   // Dark mode toggle JS
-  //   // Get toggle switch
-  //   const toggleSwitch = document.getElementById("toggle-switch");
-  //   // Check for previously selected theme or color scheme setting
-  //   function checkTheme() {
-  //     if (localStorage.getItem("theme")) {
-  //       currentTheme = localStorage.getItem("theme");
-  //     } else if (
-  //       window.matchMedia &&
-  //       window.matchMedia("(prefers-color-scheme: dark)").matches
-  //     ) {
-  //       currentTheme = "dark";
-  //     } else {
-  //       currentTheme = null;
-  //     }
-  //   }
-  //   // Switch theme and store setting
-  //   function switchTheme(e) {
-  //     if (e.target.checked) {
-  //       document.documentElement.setAttribute("data-theme", "dark");
-  //       localStorage.setItem("theme", "dark");
-  //     } else {
-  //       document.documentElement.setAttribute("data-theme", "light");
-  //       localStorage.setItem("theme", "light");
-  //     }
-  //   }
-  //   // Listen for switch toggles
-  //   toggleSwitch.addEventListener("change", switchTheme, false);
-  //   checkTheme();
-  //   // Set stored theme
-  //   if (currentTheme) {
-  //     document.documentElement.setAttribute("data-theme", currentTheme);
-  //     if (currentTheme === "dark") {
-  //       toggleSwitch.checked = true;
-  //     }
-  //   }
-  //   return {};
-  // },
+  setup() {
+    const toggleSwitch = ref(null);
+    const currentTheme = ref(null);
+
+    return {
+      toggleSwitch,
+      currentTheme,
+    };
+  },
+  mounted() {
+    this.checkTheme();
+    this.setStoredTheme();
+  },
+  methods: {
+    // Check for previously selected theme or color scheme setting
+    checkTheme() {
+      if (localStorage.getItem("theme")) {
+        this.currentTheme = localStorage.getItem("theme");
+      } else if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        this.currentTheme = "dark";
+      } else {
+        this.currentTheme = null;
+      }
+    },
+
+    // Switch theme when toggle is switched
+    switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+      }
+    },
+
+    // Set the theme on load if it exists
+    setStoredTheme() {
+      if (this.currentTheme) {
+        document.documentElement.setAttribute("data-theme", this.currentTheme);
+        if (this.currentTheme === "dark") {
+          this.$refs.toggleSwitch.checked = true;
+        }
+      }
+    },
+  },
 };
 </script>
 

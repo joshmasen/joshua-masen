@@ -1,0 +1,161 @@
+---
+import Role from '../components/Role.astro'
+
+const jobs = [
+  {
+    employer: "Workshop",
+    employerUrl: "https://useworkshop.com",
+    roles: [
+      {
+        title: "Software Engineer",
+        dates: "January 2021 - Present",
+        summary:
+          "At Workshop, we're building delightful internal email marketing software. I work on the front end of our (Ruby on Rails) application, using Vue.",
+      },
+    ],
+  },
+  {
+    employer: "Flywheel",
+    employerNote: "(Acquired by WP Engine)",
+    employerUrl: "https://getflywheel.com",
+    roles: [
+      {
+        title: "Front-end Engineer (Product)",
+        dates: "June 2019 - January 2021",
+        summary:
+          "On the Product team at Flywheel I work on our hosting application built with Ruby on Rails. I'm responsible for the HTML, CSS, and JS, and I work closely with our designers and backend engineers to create delightful experiences for our customers.",
+      },
+      {
+        title: "Front-end Engineer (Marketing)",
+        dates: "May 2016 - June 2019",
+        summary:
+          "As a Front-End Engineer on the Marketing team I was responsible for developing various Flywheel marketing sites, typically on WordPress. I worked closely with designers and content creators to rebuild our blog. I also acted as a technical resource for the team and integrated marketing and analytics software to help track and meet business goals.",
+      },
+      {
+        title: "WordPress Course Instructor",
+        dates: "April 2016 - June 2016",
+        summary:
+          "As part of a partnership with Flywheel and Interface Web School, I instructed a class of students on the basics of web development, and introduced them to custom theme development in WordPress. Students developed real-world final projects for local non-profit businesses.",
+      },
+      {
+        title: "Happiness Engineer",
+        dates: "January 2014 - May 2016",
+        summary:
+          "As the first full-time hire and first Happiness Engineer at Flywheel, my job was to understand our product deeply, sell it to new users, and support it for existing customers. I answered support requests via email and phone, and solved problems for customers related to WordPress and the Flywheel hosting product.",
+      },
+    ],
+  },
+  {
+    employer: "Webster",
+    employerUrl: "https://websterdesign.com",
+    roles: [
+      {
+        title: "Web/Interactive Designer",
+        dates: "October 2012 - December 2014",
+        summary:
+          "Research, plan, design and develop web and interactive solutions for a variety of clients. From initial consultation, to content strategy, low and high fidelity prototypes, content management system integrations, quality control, and production launch, I help clients create or redefine their presence&nbsp;online.",
+      },
+    ],
+  },
+  {
+    employer: "Oriental Trading Company",
+    employerUrl: "https://orientaltrading.com",
+    roles: [
+      {
+        title: "Web Designer",
+        dates: "November 2010 - September 2012",
+        summary:
+          "Developed and implemented front-end solutions that supported the user experience strategy. This included information architecture (wireframing, low fidelity prototypes), user interface design (high fidelity prototypes), and interaction design (HTML/CSS/JS).",
+      },
+    ],
+  },
+];
+---
+<style>
+.role {
+  margin-bottom: 2rem;
+}
+
+.role p {
+  font-size: 1rem;
+}
+
+li {
+  position: relative;
+  color: var(--primary);
+  list-style-type: none;
+}
+
+.employer-note {
+  display: inline;
+  color: var(--base);
+  margin: 0 0 0 0.75rem;
+  font-style: unset;
+}
+
+li li h4 {
+  margin: 0;
+}
+
+li small {
+  margin: 0 0 0.5rem;
+}
+
+li > * {
+  color: var(--base);
+}
+
+li > a {
+  color: unset;
+}
+
+li > ul > li {
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+li > ul > li:before {
+  content: "•";
+  font-size: 2rem;
+  position: absolute;
+  left: -24px;
+  top: -11px;
+}
+
+li > ul > li:after {
+  content: "";
+  position: absolute;
+  height: calc(100% - 20px);
+  top: 20px;
+  left: -18px;
+  width: 2px;
+  background-color: var(--primary);
+}
+
+@media (min-width: 650px) {
+  li > ul > li:before {
+    content: "•";
+    font-size: 2rem;
+    position: absolute;
+    left: -26px;
+    top: -15px;
+  }
+}
+</style>
+
+<ul class="jobs">
+  <li class="job">
+    {jobs.map((job) => (
+      <a href={job.employerUrl}><h3>{ job.employer }</h3></a>
+      <ul class="roles">
+        {job.roles.map((role) => (
+          <li class="role">
+            <h4>{ role.title }</h4>
+            <small>{ role.dates }</small>
+            <p>{ role.summary }</p>
+          </li>
+        ))}
+      </ul>
+    ))}
+  </li>
+</ul>
