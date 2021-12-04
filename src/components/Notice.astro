@@ -1,16 +1,12 @@
-<style scoped>
+<style lang="scss" scoped>
 .notice {
   display: block;
   text-align: center;
   background-color: var(--primary);
   padding: 0.85em;
-  color: var(--base);
+  color: #2B2B2B;
   max-width: 100%;
   margin: 0 0 2em 0;
-}
-
-[data-theme="dark"] .notice {
-  color: var(--bg);
 }
 
 .notice p {
@@ -19,7 +15,13 @@
 }
 
 .notice a {
-  color: var(--bg);
+  color: #2B2B2B;
+  border-bottom: 2px solid #2B2B2B;
+
+  &:hover {
+    color: var(--base-light);
+    border-bottom: 2px solid var(--base-light);
+  }
 }
 </style>
 

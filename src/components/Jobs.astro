@@ -35,7 +35,7 @@ const jobs = [
         title: "WordPress Course Instructor",
         dates: "April 2016 - June 2016",
         summary:
-          "As part of a partnership with Flywheel and Interface Web School, I instructed a class of students on the basics of web development, and introduced them to custom theme development in WordPress. Students developed real-world final projects for local non-profit businesses.",
+          "As part of a partnership with Flywheel and Interface Web School (now <a href='https://aiminstitute.org/programs/technical-training/aim-code-school/' target='blank' rel='noreferrer noopener'>AIM Code School</a>), I instructed a class of students on the basics of web development, and introduced them to custom theme development in WordPress. Students developed real-world final projects for local non-profit businesses.",
       },
       {
         title: "Happiness Engineer",
@@ -146,7 +146,7 @@ li > ul > li:after {
 <ul class="jobs">
   <li class="job">
     {jobs.map((job) => (
-      <a href={job.employerUrl}><h3>{ job.employer }</h3></a>
+      <h3><a href={job.employerUrl}>{ job.employer }</a></h3>
       <ul class="roles">
         {job.roles.map((role) => (
           <li class="role">

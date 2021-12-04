@@ -139,6 +139,7 @@ table {
 
 :root {
   --base: #404040;
+  --base-light: #4d4d4d;
   --bg: #ebece1;
   --no-bg: #ffffff;
   --primary: #ff6948;
@@ -210,7 +211,7 @@ small {
 a {
   color: var(--primary);
   text-decoration: none;
-  transition: 0.2s all;
+  transition: 0.2s color ease-in-out;
 }
 
 a:hover {

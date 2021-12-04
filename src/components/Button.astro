@@ -5,25 +5,35 @@ export interface Props {
 
 const { href } = Astro.props;
 ---
-<style scoped>
+<style lang="scss" scoped>
 .button {
-  text-decoration: none;
   color: var(--base);
+  text-decoration: none;
   background: var(--no-bg);
   border: 2px solid var(--base);
   padding: 1.5rem 3rem;
   transition: box-shadow 100ms ease-in-out, background 200ms ease-in-out,
     color 200ms ease-in;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 4px 0px 0px var(--base);
   backface-visibility: hidden;
+
+  &:hover {
+    box-shadow: 0px -1px 0px -1px var(--base);
+    border: 2px solid var(--base);
+    background: var(--base);
+    backface-visibility: hidden;
+    color: var(--no-bg);
+  }
 }
 
-.button:hover {
-  box-shadow: 0px -1px 0px -1px rgba(0, 0, 0, 0.75);
-  border: 2px solid var(--base);
-  background: hsl(0, 0%, 15%);
-  color: var(--no-bg);
-  backface-visibility: hidden;
+// Dark
+html[data-theme="dark"] .button {
+  background: var(--bg);
+
+  &:hover {
+    background: var(--base);
+    color: var(--bg);
+  }
 }
 </style>
 
