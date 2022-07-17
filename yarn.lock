@@ -87,10 +87,10 @@
     is-wsl "^2.2.0"
     node-fetch "^3.2.3"
 
-"@astrojs/vue@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@astrojs/vue/-/vue-0.1.4.tgz#c8a9c560eaea5b8d9a1a24f0e611114fc631f7ea"
-  integrity sha512-Y24Ty0cff+BOauNNyoMIma/HpS/A6ohVAGA6b9W0csW1PexkTC2nc5Zr0mHvuuWgZsMlj0dJ9ACcM5ArIy1eEw==
+"@astrojs/vue@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@astrojs/vue/-/vue-0.1.5.tgz#a720c6a3e0c0868ee9e47d3cfd9607156bcfde61"
+  integrity sha512-U2J9ymxj6tiKxXBvFAFjgea6g7MHOUUMGPuJqrgWmX25Od+Pm+VfEETn9t6T3DqW5Tt2qCai9nd0k6WrhZCeGA==
   dependencies:
     "@vitejs/plugin-vue" "^2.3.3"
     vite "^2.9.9"
