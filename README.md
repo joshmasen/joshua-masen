@@ -1,4 +1,6 @@
-# Nuxt 3 Minimal Starter
+# JoshuaMasen.com
+
+My personal web site, built with Nuxt and hosted on Netlify.
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 

@@ -87,13 +87,13 @@
         "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#mdc-configs": [
-        "./mdc-configs.mjs"
+        "./mdc-configs"
       ],
       "#mdc-highlighter": [
-        "./mdc-highlighter.mjs"
+        "./mdc-highlighter"
       ],
       "#mdc-imports": [
-        "./mdc-imports.mjs"
+        "./mdc-imports"
       ],
       "#image": [
         "../node_modules/@nuxt/image/dist/runtime"
@@ -108,7 +108,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/c8b71bd5-1826-4d7e-85c5-20c57d0c8786.json"
+        "./manifest/meta/dev.json"
       ],
       "#build": [
         "."
