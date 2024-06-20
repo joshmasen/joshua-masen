@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --base: #404040;
+  --base-light: #4d4d4d;
+  --bg: #ebece1;
+  --no-bg: #ffffff;
+  --primary: #ff6948;
+  --primary-hover: #c25036;
+  --secondary: #d0d3c6;
+  --font-family: "Work Sans", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--base);
+}
+
+::selection {
+  color: var(--base);
+  background: var(--secondary);
+}
+
+a {
+  @apply underline transition-colors duration-200 ease-in-out text-primary hover:text-primary-hover underline-offset-2;
+}
+
+/* Responsive iframes */
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin-bottom: 2rem;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

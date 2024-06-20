@@ -1,0 +1,4 @@
+const index_vue_vue_type_style_index_0_scoped_875bda6b_lang = "h1[data-v-875bda6b]{background-image:linear-gradient(to right,var(--secondary) 0,var(--secondary) 100%);background-position:0 3.5em;background-repeat:no-repeat;background-size:100% 20%;display:inline-block;font-size:clamp(3rem,9.1vw - 1.2rem,7rem);font-weight:600;letter-spacing:-.25vw;margin-top:0}@media (min-width:429px){h1[data-v-875bda6b]{background-position:0 2.2em}}@keyframes tada-875bda6b{0%{transform:scaleX(1)}10%,20%{transform:scale3d(.9,.9,.9) rotate(-3deg)}30%,50%,70%,90%{transform:scale3d(1.1,1.1,1.1) rotate(3deg)}40%,60%,80%{transform:scale3d(1.1,1.1,1.1) rotate(-3deg)}to{transform:scaleX(1)}}.tada[data-v-875bda6b]{animation:tada-875bda6b 1s forwards;animation-delay:1s;display:inline-block}";
+
+export { index_vue_vue_type_style_index_0_scoped_875bda6b_lang as i };
+//# sourceMappingURL=index-styles-1.mjs-C5cE5dhP.mjs.map
