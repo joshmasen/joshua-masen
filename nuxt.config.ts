@@ -35,5 +35,5 @@ export default defineNuxtConfig({
       ],
     },
   },
-  ignore: ["pages/blog/**"],
+  ignore: process.env.NODE_ENV === "production" ? ["pages/blog/**"] : [],
 });
