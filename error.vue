@@ -1,6 +1,13 @@
+<script setup lang="ts">
+import type { NuxtError } from "#app";
+
+const props = defineProps({
+  error: Object as () => NuxtError,
+});
+</script>
+
 <template>
   <div>
-    <Nav />
     <main class="max-w-2xl px-8 pt-0 pb-16 m-auto mb-32">
       <header class="flex px-8 pt-6 pb-8 lg:pb-12 lg:pt-16 sm:justify-center">
         <h1 class="text-7xl leading-[1.3] font-semibold">
