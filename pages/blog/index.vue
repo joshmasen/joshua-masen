@@ -23,13 +23,5 @@
 </template>
 
 <script setup>
-onMounted(async () => {
-  if (process.env.NODE_ENV !== "development") {
-    await navigateTo("/");
-  } else {
-    const { data } = await useAsyncData("blog", () =>
-      queryContent("/blog").find()
-    );
-  }
-});
+const { data } = await useAsyncData("blog", () => queryContent("/blog").find());
 </script>
