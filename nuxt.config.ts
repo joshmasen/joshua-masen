@@ -1,16 +1,8 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  // css: ["~/assets/css/tailwind.css"],
-  // build: {
-  //   postcss: {
-  //     postcssOptions: {
-  //       plugins: {
-  //         tailwindcss: {},
-  //         autoprefixer: {},
-  //       },
-  //     },
-  //   },
-  // },
+  // My Netlify build was running out of memory in the Netlify Functions build step
+  // and adding this section, suggested in the Netlify forums, fixed the issue:
+  // https://answers.netlify.com/t/javascript-heap-out-of-memory-when-trying-to-build-a-nuxt-app/93138/13
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -43,4 +35,5 @@ export default defineNuxtConfig({
       ],
     },
   },
+  ignore: ["pages/blog/**"],
 });
