@@ -11,12 +11,21 @@ export default defineNuxtConfig({
   //     },
   //   },
   // },
-  // buildModules: ["@nuxtjs/google-fonts"],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+      cssnano:
+        process.env.NODE_ENV === "production"
+          ? { preset: ["default", { discardComments: { removeAll: true } }] }
+          : false, // disable cssnano when not in production
+    },
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "@nuxt/content",
-    "@nuxt/image"
+    "@nuxt/image",
   ],
   content: {},
   googleFonts: {
