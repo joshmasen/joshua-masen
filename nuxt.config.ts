@@ -13,18 +13,22 @@ export default defineNuxtConfig({
           : false, // disable cssnano when not in production
     },
   },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "@nuxt/content",
     "@nuxt/image",
   ],
+
   content: {},
+
   googleFonts: {
     families: {
       "Work Sans": [400, 600],
     },
   },
+
   app: {
     head: {
       link: [
@@ -35,6 +39,8 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   ignore: process.env.NODE_ENV === "production" ? ["pages/blog/**"] : [],
   devtools: { enabled: false },
+  compatibilityDate: "2024-08-16",
 });
