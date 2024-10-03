@@ -1090,18 +1090,18 @@
     which "^3.0.1"
     ws "^8.18.0"
 
-"@nuxt/image@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/image/-/image-1.8.0.tgz#e7270ca16841fd8a4da43d29bc08ad1bbc620c9a"
-  integrity sha512-GBbORch+ZfWJ0KB8PaXABsPjaiEXB4B4plcpAUVNCdzKZi2qQ4beRnEXfAbtAWPUPefj3rgCG7b9AqAe51Qlzw==
+"@nuxt/image@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/image/-/image-1.8.1.tgz#8d3370ebaa687e4069763e993162e8acc24bda38"
+  integrity sha512-qNj7OCNsoGcutGOo1R2PYp4tQ/6uD77aSakyDoVAmLSRJBmhFTnT2+gIqVD95JMmkSHgYhmSX4gGxnaQK/t1cw==
   dependencies:
-    "@nuxt/kit" "^3.13.0"
+    "@nuxt/kit" "^3.13.2"
     consola "^3.2.3"
     defu "^6.1.4"
     h3 "^1.12.0"
     image-meta "^0.2.1"
     node-fetch-native "^1.6.4"
-    ohash "^1.1.3"
+    ohash "^1.1.4"
     pathe "^1.1.2"
     std-env "^3.7.0"
     ufo "^1.5.4"
@@ -1186,32 +1186,6 @@
     unimport "^3.9.0"
     untyped "^1.4.2"
 
-"@nuxt/kit@^3.13.0":
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.13.0.tgz#95d56b7eb2c54ad7873b4e3a9cd7c6fe3bbd3c81"
-  integrity sha512-gbhSbDvYfkGQ0R2ztqTLQLHRMv+7g50kAKKuN6mbF4tL9jg7NPnQ8bAarn2I4Qx8xtmwO+qY1ABkmYMn5S1CpA==
-  dependencies:
-    "@nuxt/schema" "3.13.0"
-    c12 "^1.11.1"
-    consola "^3.2.3"
-    defu "^6.1.4"
-    destr "^2.0.3"
-    globby "^14.0.2"
-    hash-sum "^2.0.0"
-    ignore "^5.3.2"
-    jiti "^1.21.6"
-    klona "^2.0.6"
-    knitwork "^1.1.0"
-    mlly "^1.7.1"
-    pathe "^1.1.2"
-    pkg-types "^1.1.3"
-    scule "^1.3.0"
-    semver "^7.6.3"
-    ufo "^1.5.4"
-    unctx "^2.3.1"
-    unimport "^3.11.0"
-    untyped "^1.4.2"
-
 "@nuxt/schema@3.12.2":
   version "3.12.2"
   resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.12.2.tgz#dc2c3bced5a6965075dabfb372dd2f77bb3b33c6"
@@ -1246,24 +1220,6 @@
     ufo "^1.5.4"
     uncrypto "^0.1.3"
     unimport "^3.9.0"
-    untyped "^1.4.2"
-
-"@nuxt/schema@3.13.0":
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.13.0.tgz#104ce5fdca095ba98268a3dfe47c92e657d08f0d"
-  integrity sha512-JBGSjF9Hd8guvTV2312eM1RulCMJc50yR3CeMZPLDsI02A8TXQnABS8EbgvGRvxD43q/ITjj21B2ffG1wEVrnQ==
-  dependencies:
-    compatx "^0.1.8"
-    consola "^3.2.3"
-    defu "^6.1.4"
-    hookable "^5.5.3"
-    pathe "^1.1.2"
-    pkg-types "^1.1.3"
-    scule "^1.3.0"
-    std-env "^3.7.0"
-    ufo "^1.5.4"
-    uncrypto "^0.1.3"
-    unimport "^3.11.0"
     untyped "^1.4.2"
 
 "@nuxt/schema@3.13.2", "@nuxt/schema@^3.13.2":
@@ -7525,25 +7481,6 @@ unified@^11.0.0, unified@^11.0.4, unified@^11.0.5:
     is-plain-obj "^4.0.0"
     trough "^2.0.0"
     vfile "^6.0.0"
-
-unimport@^3.11.0:
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/unimport/-/unimport-3.11.1.tgz#b750eb69fbacf481e000829a79eb9da19919f33e"
-  integrity sha512-DuB1Uoq01LrrXTScxnwOoMSlTXxyKcULguFxbLrMDFcE/CO0ZWHpEiyhovN0mycPt7K6luAHe8laqvwvuoeUPg==
-  dependencies:
-    "@rollup/pluginutils" "^5.1.0"
-    acorn "^8.12.1"
-    escape-string-regexp "^5.0.0"
-    estree-walker "^3.0.3"
-    fast-glob "^3.3.2"
-    local-pkg "^0.5.0"
-    magic-string "^0.30.11"
-    mlly "^1.7.1"
-    pathe "^1.1.2"
-    pkg-types "^1.2.0"
-    scule "^1.3.0"
-    strip-literal "^2.1.0"
-    unplugin "^1.12.2"
 
 unimport@^3.12.0:
   version "3.13.1"
