@@ -42,5 +42,8 @@ export default defineNuxtConfig({
 
   ignore: process.env.NODE_ENV === "production" ? ["pages/blog/**"] : [],
   devtools: { enabled: false },
+  devServer: {
+    port: 3001,
+  },
   compatibilityDate: "2024-08-16",
 });
