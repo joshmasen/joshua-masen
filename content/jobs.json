@@ -10,6 +10,7 @@
           "summary": "At Workshop, we're building delightful internal email marketing software. I work primarily on the front end of our (Ruby on Rails) application, using&nbsp;Vue.",
           "technologies": [
             "Ruby on Rails",
+            "TypeScript",
             "JavaScript",
             "HTML",
             "CSS",
