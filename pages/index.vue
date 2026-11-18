@@ -51,9 +51,7 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData("jobs", () =>
-  queryContent("/jobs").findOne()
-);
+import data from "~/content/jobs.json";
 </script>
 
 <style scoped>

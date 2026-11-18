@@ -1,32 +1,25 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+import tailwindcss from "@tailwindcss/vite";
+
+// https://nuxt.com/docs/4.x/api/nuxt-config
 export default defineNuxtConfig({
-  // My Netlify build was running out of memory in the Netlify Functions build step
-  // and adding this section, suggested in the Netlify forums, fixed the issue:
-  // https://answers.netlify.com/t/javascript-heap-out-of-memory-when-trying-to-build-a-nuxt-app/93138/13
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-      cssnano:
-        process.env.NODE_ENV === "production"
-          ? { preset: ["default", { discardComments: { removeAll: true } }] }
-          : false, // disable cssnano when not in production
-    },
+  srcDir: ".",
+  css: ["~/assets/css/tailwind.css"],
+  vite: {
+    plugins: [tailwindcss()],
   },
 
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/google-fonts",
-    "@nuxt/content",
-    "@nuxt/image",
-  ],
+  modules: ["@nuxt/fonts"],
 
-  content: {},
-
-  googleFonts: {
-    families: {
-      "Work Sans": [400, 600],
-    },
+  fonts: {
+    families: [
+      {
+        name: "Work Sans",
+        provider: "google",
+        weights: [400, 600],
+        styles: ["normal"],
+        global: true,
+      },
+    ],
   },
 
   app: {
@@ -40,7 +33,6 @@ export default defineNuxtConfig({
     },
   },
 
-  ignore: process.env.NODE_ENV === "production" ? ["pages/blog/**"] : [],
   devtools: { enabled: false },
   devServer: {
     port: 3001,

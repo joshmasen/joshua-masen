@@ -3,16 +3,11 @@
     <Body
       class="flex flex-col justify-center font-normal leading-7 bg-background"
     >
-      <Banner
-        >I've got some limited time available for freelance projects. Email
-        me!</Banner
-      >
+      <Banner />
       <slot />
     </Body>
 
     <Contact />
-
-    <Footer />
   </div>
 </template>
 
